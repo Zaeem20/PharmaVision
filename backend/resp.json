@@ -1,0 +1,155 @@
+[
+    {
+      "@context": "https://schema.org/",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": {
+            "@type": "MedicalWebPage",
+            "@id": "https://www.drugs.com/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Amlodipine",
+          "item": {
+            "@type": "MedicalWebPage",
+            "@id": "https://www.drugs.com/amlodipine.html"
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "MedicalWebPage",
+      "@id": "https://www.drugs.com/amlodipine.html",
+      "url": "https://www.drugs.com/amlodipine.html",
+      "name": "Amlodipine: Uses, Side Effects &amp; Dosage",
+      "description": "Amlodipine besylate (Norvasc) is used to treat high blood pressure (hypertension) and angina. Includes amlodipine side effects, dosage, interactions and indications.",
+      "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Patient"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.drugs.com/#organization",
+        "name": "Drugs.com",
+        "url": "https://www.drugs.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.drugs.com/img/logo/schema/drugscom-logomark-112x112.png",
+          "width": 112,
+          "height": 112
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "contentUrl": "https://www.drugs.com/images/pills/fio/ASC01980.JPG",
+        "url": "https://www.drugs.com/images/pills/fio/ASC01980.JPG",
+        "caption": "Amlodipine 5 mg"
+      },
+      "mainEntity": {
+        "@type": "Drug",
+        "name": "amlodipine",
+        "nonProprietaryName": "amlodipine",
+        "pregnancyCategory": {
+          "@type": "DrugPregnancyCategory",
+          "name": "C"
+        },
+        "pregnancyWarning": "Animal reproduction studies have shown an adverse effect on the fetus and there are no adequate and well-controlled studies in humans, but potential benefits may warrant use in pregnant women despite potential risks.",
+        "prescriptionStatus": "Prescription Only",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.2",
+          "reviewCount": 807,
+          "bestRating": "10",
+          "worstRating": "1",
+          "url": "https://www.drugs.com/comments/amlodipine/"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.drugs.com/images/pills/fio/ASC01980.JPG",
+          "url": "https://www.drugs.com/images/pills/fio/ASC01980.JPG",
+          "caption": "Amlodipine 5 mg"
+        }
+      },
+      "reviewedBy": {
+        "@type": "Person",
+        "name": "Melisa Puckey",
+        "honorificSuffix": "BPharm",
+        "@id": "https://www.drugs.com/support/editor/21/melisa-puckey-bpharm.html",
+        "jobTitle": "Senior Editorial Pharmacist",
+        "image": "https://www.drugs.com/img/about/melisa-puckey.jpg",
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "url": "https://en.wikipedia.org/wiki/University_of_Otago"
+          }
+        ],
+        "memberOf": [
+          {
+            "@type": "Organization",
+            "url": "https://pharmacycouncil.org.nz"
+          },
+          {
+            "@type": "Organization",
+            "url": "https://www.immune.org.nz"
+          },
+          {
+            "@type": "Organization",
+            "url": "https://www.psnz.org.nz"
+          },
+          {
+            "@type": "Organization",
+            "url": "https://www.medicalwriters.org"
+          }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/melisa-puckey-b6068ab0/"
+        ]
+      },
+      "lastReviewed": "2023-10-29"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best time of day to take blood pressure medication?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Research has suggested that taking your blood pressure medication at night instead of in the morning can provide better blood pressure control at night without compromising daytime blood pressure control and reduce your overall risk of dying because of cardiovascular disease by 45%.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I reduce swelling from amlodipine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Swelling from amlodipine is a common, but often troublesome side effect of amlodipine with 5% to 9% of people stopping amlodipine because of it. If you develop swelling with amlodipine, tell your doctor right away because they may be able to change your blood pressure medications slightly to help reduce the swelling. Swelling caused by amlodipine does not usually respond to treatment with diuretics (such as furosemide) because it is caused by changes in capillary pressure that result in leakage into the spaces between capillaries (called the interstitial area) rather than water retention.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take for amlodipine to work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Amlodipine can take more than 8 hours to start working, because it takes a long time to be absorbed. This means it is not a good choice for lowering blood pressure quickly, and other agents, such as hydralazine, clonidine, and nifedipine XL (which work within 1 to 2 hours) are preferred.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does amlodipine cause weight gain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Weight gain has been reported by some people taking amlodipine but this is not a common side effect and some people have also reported weight loss. Weight gain with amlodipine may also be a symptom of edema, which is when you retain fluid, which may be particularly noticeable around your ankles or lower legs. The risk of edema is greater in women compared with men and in those people taking a higher dosage of amlodipine, and edema is usually noticed as weight gain.</p>"
+          }
+        }
+      ]
+    }
+  ]

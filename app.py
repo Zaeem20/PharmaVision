@@ -5,11 +5,10 @@ from pathlib import Path
 from backend.detection import predict_pill
 from werkzeug.datastructures import FileStorage
 
-app = Flask(__name__, template_folder='../frontend', static_folder='../frontend/static')
+app = Flask(__name__, template_folder='frontend', static_folder='frontend/static')
 
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
- 
 
 @app.route('/index', methods= ['GET']) 
 def index():
@@ -22,10 +21,11 @@ def about():
 @app.route('/upload', methods=['POST'])
 def upload():
     r: Request = request
-    if 'file' not in r.files:
+    if 'file' not in r.files: 
         return "No file part"
     
     file: FileStorage = r.files['file']
+    print(file)
     
     if file.filename == '':
         return "No selected file"
@@ -33,9 +33,9 @@ def upload():
     if file:
         filename = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         file.save(filename)
-        return "File uploaded successfully"
-    
 
+        
+        "File uploaded successfully"
     
 
 

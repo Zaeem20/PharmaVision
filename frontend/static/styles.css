@@ -9,7 +9,7 @@
 
 html {
   background-color: #f1f9ff;
-  background: url(../img/background.jpg);
+  background: url(img/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   /* background; */
@@ -34,6 +34,31 @@ html {
   margin: 15px;
   padding: 15px;
 }
+
+/* .search-container {
+    position: relative;
+}
+
+.search-box {
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(94, 168, 106);
+    color: #fff;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 8px 12px;
+    cursor: pointer;
+} */
 
 .logo {
   text-align: center;

@@ -13,3 +13,5 @@ def predict_pill(img_path_or_url):
 
     # infer on an image hosted elsewhere
     print(model.predict(image_path=img_path_or_url, hosted=True, confidence=40, overlap=30).json())
+
+
