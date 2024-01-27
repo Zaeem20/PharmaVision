@@ -1,15 +1,19 @@
 import os
 from flask import Flask, request, render_template
 from flask import Request
+from pathlib import Path
+from detection import predict_pill
+from werkzeug.datastructures import FileStorage
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../frontend', static_folder='../frontend/static')
+
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+ 
 
-
-@app.route('/index', methods= ['GET' 'POST']) 
+@app.route('/index', methods= ['GET']) 
 def index():
-    return "this is index page"
+    return render_template('index.html')
 
 @app.route('/about', methods=['GET', 'POST'])
 def about():
@@ -17,10 +21,11 @@ def about():
 
 @app.route('/upload', methods=['POST'])
 def upload():
-    if 'file' not in request.files:
+    r: Request = request
+    if 'file' not in r.files:
         return "No file part"
     
-    file = request.files['file']
+    file: FileStorage = r.files['file']
     
     if file.filename == '':
         return "No selected file"
@@ -29,7 +34,20 @@ def upload():
         filename = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         file.save(filename)
         return "File uploaded successfully"
+    
+
+    
+
+
+@app.route('/')
+def homepage():
+    return "running"
+
+
+
 
 if __name__ == "__main__":
-    app.run(debug=True)
+
+    # Run the Flask app
+    app.run("127.0.0.1", port=8080, debug=True)
     
