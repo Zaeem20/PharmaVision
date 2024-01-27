@@ -14,6 +14,10 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def index():
     return render_template('index.html')
 
+@app.route('/result')
+def resul():
+    return render_template('re.html')
+
 @app.route('/about', methods=['GET', 'POST'])
 def about():
     return render_template('about_us.html')
@@ -35,6 +39,10 @@ def upload():
         file.save(filename)
 
         
+        path =os.path.join(os.getcwd(), os.path.listdir('backend/uploads')[0])
+        if path:
+            data = predict_pill(path)
+            
         "File uploaded successfully"
     
 
