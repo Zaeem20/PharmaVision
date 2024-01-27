@@ -1,12 +1,12 @@
 import os
-from flask import Flask, request, render_template
-from flask import Request
+from flask import Flask, request, render_template, redirect
+from flask import Request, Response, url_for, jsonify
 from pathlib import Path
 from backend.detection import predict_pill
 from werkzeug.datastructures import FileStorage
 
 app = Flask(__name__, template_folder='frontend', static_folder='frontend/static')
-
+ 
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -16,13 +16,14 @@ def index():
 
 @app.route('/result')
 def resul():
-    return render_template('re.html')
+    r : Request = request
+    return render_template('re.html',content =  r.args.get('content'))
 
 @app.route('/about', methods=['GET', 'POST'])
 def about():
     return render_template('about_us.html')
 
-@app.route('/upload', methods=['POST'])
+@app.route('/upload', methods=['GET','POST'])
 def upload():
     r: Request = request
     if 'file' not in r.files: 
@@ -39,12 +40,13 @@ def upload():
         file.save(filename)
 
         
-        path =os.path.join(os.getcwd(), os.path.listdir('backend/uploads')[0])
+        path =os.path.join(os.getcwd(), os.listdir('uploads')[0])
         if path:
             data = predict_pill(path)
-            
-        "File uploaded successfully"
-    
+            classi = data['predictions'][0]['class']
+            print(classi)
+            return jsonify({'class': classi})
+
 
 
 @app.route('/')
