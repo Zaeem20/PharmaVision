@@ -2,7 +2,7 @@ import os
 from flask import Flask, request, render_template
 from flask import Request
 from pathlib import Path
-from backend.detection import predict_pill
+from detection import predict_pill
 from werkzeug.datastructures import FileStorage
 
 app = Flask(__name__, template_folder='../frontend', static_folder='../frontend/static')
